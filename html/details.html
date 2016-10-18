@@ -1,0 +1,86 @@
+	
+	<header class="detailTop">
+		<a href="javascript:;" class="iconfont icon-left" ng-click=goCart()></a>
+		<h2>商品详情</h2>
+		<a href="javascript:;" class="iconfont icon-share" ng-click="toshare()"></a>
+	
+	</header>
+	<div class="detail-autoPlay">
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide" ng-repeat="slide in banner">
+					<img ng-src="{{slide.img}}" class="autoImg" />
+				</div>
+			</div>
+			<!--<div class="swiper-pagination"></div>-->
+		</div>
+	</div>
+	<div class="detail-des">
+		<p class="detail-goodsname" ng-bind="goodsInfor.produce_name"></p>
+		<div class="detail-jg">
+			<span class="detail-price-now" ng-bind="goodsInfor.sell_price | currency:'¥'"></span>
+			<span class="detail-price-tag" ng-bind="goodsInfor.dollar | currency:'$'"></span>
+		</div>
+		<div class="detail-marketjg">市场价: <del ng-bind="goodsInfor.market_price | currency:'¥'"></del></div>
+	
+		<div class="detail-like">
+			<a href="javascript:;" class="iconfont icon-like" ng-click="detailpraise()"></a>
+			<span class="detail-zancount">赞(<span class="detail-praise-count" ng-bind="goodsInfor.praise_num"></span>)</span>
+		</div>
+	</div>
+	
+	<div class="detail-opinion" ng-click="detailgoods()">
+		<h6>全部评论(<span class="opinion-count" ng-bind="detailCount.count" ></span>)</h6>
+		<a href="javascript:;" class="iconfont icon-right" ></a>
+	</div>
+	<div class="detail-promise1">
+	<div class="detail-promise" ng-click="detailgoods()">
+		<div class="detail-personImg"><img src="{{detailArea.header_img}}"/></div>
+		<span class="detail-userName" ng-bind="detailArea.name"></span><span class="detail-commentTime" ng-bind="detailArea.create_time"></span>
+		<p class="detail-matter" ng-bind="detailArea.content"></p>
+		<div class="detail-chengluo">服务承诺</div>
+	</div>
+	</div>
+	
+	<div class="detail-biaozhi clrfix">
+		<span class="detail-certified">正品保障<i class="icon"></i></span>
+		<span class="detail-flash">闪电发送<i class="icon"></i></span>
+		<span class="detail-refund">7天退换货<i class="icon"></i></span>
+		<span class="detail-comments">海外直采<i class="icon"></i></span>
+	</div>
+	
+	<div class="detail-zhanshi">
+		<p class="detail-tips">产品展示</p>
+		<div class="tupian">
+			<div ng-repeat="m in detaillist"><img src="{{m.detailurl}}" /></div>
+		</div>
+	
+	</div>
+	<div class="detail-car">
+		<a href="javascript:;" class="iconfont icon-shoppingCar3"></a><i class="detail-count"></i></div>
+	<div class="detail-bottom">
+		<a href="javascript:;" class="detail-addCar" ng-click="detailAddcar()">加入购物车</a>
+		<a href="javascript:;" class="detail-buy">立即购买</a>
+	</div>
+	
+<div class="am-share">
+			
+			<ul class="am-share-sns clrfix">
+				<li>
+					<a href="javascipt:;"> <i class="iconfont icon-detailweixin"></i> <span>微信</span> </a>
+				</li>
+				<li>
+					<a href="#"> <i class="iconfont icon-friendsCircle"></i> <span>朋友圈</span> </a>
+				</li>
+				<li>
+					<a href="#"> <i class="iconfont icon-qq"></i> <span>QQ好友</span> </a>
+				</li>
+				<li>
+					<a href="#"> <i class="iconfont icon-weibo"></i> <span>新浪微博</span> </a>
+				</li>
+			</ul>
+			<div class="am-share-footer"><i class="iconfont icon-chacha"></i></div>
+			
+			
+		</div>
+		<!--<div class="sharebg" ng-click="ck()"></div>-->

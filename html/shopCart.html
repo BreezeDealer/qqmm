@@ -1,0 +1,73 @@
+
+	<header class="login-top" >
+			<a href="javascript:;" class="iconfont icon-left"></a>
+			<h2 class="login-title">购物车</h2>
+			<a href="javascript:;" class="login-rega" ng-click="edit();" id="shopCart-edit">编辑</a>
+			
+		</header>
+		
+<div class="shopCart-content">
+<div class="shopCart-sui clrfix">
+	<p class="iconfont icon-home"></p>
+	<p class="shopCart-suiinfo">喵喵郑州(综合保税区)</p>
+</div>
+<div class="shopCart-goods">
+	<ul>
+		<li class="shopCart-goodsitem">
+			<div class="shopCart-temp">
+			<span class="shopCart-sel shopCart-select iconfont " ng-click="selbtnedit();"/></span>
+			<div class="shopCart-goodsimgitem">
+				<img src="img/miao.jpg" class="shopCart-goodsimg" />
+				
+			</div></div>
+				<div class="shopCart-goodsiteminfo " >
+					<p class="shopCart-goodsitemtitle" ng-click=commentgoods()>(向大眼仔进军)兰蔻小黑瓶大眼睛精华20ml保税区直邮20ml</p>
+					<div class="shopCart-goodsnu clrfix"><span class="shopCart-goodsprice ">￥388</span>
+					<div id="shopCart-editx"><span class="shopCart-goodspnum">x1</span>
+					
+					<p class="shopCart-goodssui">预计税费:<span>￥388.00</span><span class="iconfont icon-downArrow shopCart-goodssuishow"></span></p>
+					</div>
+					<span class="iconfont icon-delete shopCart-goodsdel" id="shopCart-del"></span>
+					<div class="shopCart-goodscalc" id="shopCart-editnum">
+						<span  class="shopCart-goodsadd" >-</span>
+						<input type="text" class="shopCart-goodsnum" value="1"/>
+						<span class="shopCart-goodsjian" >+</span>
+					</div>
+				</div>
+		</li>
+		
+		
+	</ul>
+	<div class="shopCart-goodstotal">
+		<p class="shopCart-goodsguji">预计税费:&nbsp;&nbsp;<span>￥388.00</span></p>
+		<p class="shopCart-goodstota">商品小结:&nbsp;&nbsp;<span>￥388.00</span></p>
+	</div>
+</div>
+</div>
+<div class="shopCart-goodsall ">
+	<span class="shopCart-sel shopCart-selall shopCart-select iconfont" ng-click="shopCartSelect();"/></span>
+	<span class="shopCart-allsel">全选</span>
+	<span class="shopCart-allseltol" id="shopCart-heji">合计:￥0.00</span>
+	<a class="shopCartdelbtn" id="shopCart-stotal">结算(<span>0</span>)</a>
+	<a class="shopCartdelbtn" id="shopCart-stotaldel">删除</a>
+</div>
+
+
+<footer>
+	<div class="footer-nav " ng-click="goHome()">
+		<i class="nav-home "></i>
+		<p>喵~首页</p>
+	</div>
+	<div class="footer-nav " ng-click="goComm()">
+		<i class="nav-earth "></i>
+		<p>喵~社区</p>
+	</div>
+	<div class="footer-nav ">
+		<i class="nav-cart active " ng-click="goshopcart();"></i>
+		<p>购物车</p>
+	</div>
+	<div class="footer-nav " ng-click="goCenter()">
+		<i class="nav-me "></i>
+		<p>喵~Me</p>
+	</div>
+</footer>

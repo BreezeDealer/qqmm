@@ -1,0 +1,84 @@
+
+
+<header class="login-top" >
+			
+			<h2 class="login-title">社区</h2>
+			<a href="javascript:;" class="login-rega">晒一下</a>
+		</header>
+
+<div class="comm-content">
+<ul class="comm-photoshow">
+	<li ng-repeat="item in list">
+		<div class="comm-userinfo">
+		<div class="comm-headportrait">
+			<img ng-src="{{item.thumb}}" class="comm-headimg"/>
+		</div>
+		<div class="comm-uinfo">
+			<h2 class="comm-userid" ng-bind="item.name"></h2>
+			<p class="comm-usertime" ng-bind="item.create_time"></p>
+		</div>
+		
+		<div class="comm-concern">+关注</div>
+		</div>
+		<div class="comm-showimg " >
+			<img ng-src="{{item.url}}"  class="comm-showcontent">
+			<div class="comm-box"></div>
+			<div class="comm-dingwei"><span class="comm-brandlabel" ng-cloak>{{item.country_name}}&nbsp;{{item.buy_address}}</span></div>
+			
+			
+			<span class="comm-labelr">{{item.brand_name}}&nbsp;{{item.produce_name}}</span>
+		<div class="comm-dot">
+			
+		</div>
+		</div>
+		<div class="comm-pinglunqu">
+			<p class="comm-selftalk" ng-bind="item.content"></p>
+			
+			<p class="comm-keyinfo" >
+				<span class="comm-key" ng-bind="item.keyword"></span>
+				
+			</p>
+			
+			<div class="comm-qita clrfix">
+				<span class="comm-zan iconfont icon-like"></span>
+				<span class="comm-zannum" ng-bind="item.praise_num"></span>
+				<span class="comm-shoucang iconfont icon-starCollection"></span>
+				<span class="comm-zannum" ng-bind="item.collect_num"></span>
+				<span class="comm-share iconfont icon-share"></span>
+			</div>
+			
+			<div class="comm-alltalk">
+				<h3 >全部评论<span ng-cloak>({{item.comment_num}})</span></h3>
+				<ul>
+					<li class="comm-talkitem" >
+						<p class="comm-usertalkid" ng-cloak>{{item.talkname}}:&nbsp;</span><span class="comm-usertalkcontent" ng-cloak>{{item.talkcontent}}</p>
+						<p class="comm-usertalkid" ng-cloak>{{item.talkname1}}:&nbsp;</span><span class="comm-usertalkcontent" ng-cloak>{{item.talkcontent1}}</p>
+						<p class="comm-usertalkid" ng-cloak>{{item.talkname2}}:&nbsp;</span><span class="comm-usertalkcontent" ng-cloak>{{item.talkcontent2}}</p>
+					<p class="comm-addtalk">添加评论</p>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</li>
+
+</ul>
+</div>
+<footer>
+	<div class="footer-nav " ng-click="goHome()">
+		<i class="nav-home "></i>
+		<p>喵~首页</p>
+	</div>
+	<div class="footer-nav " ng-click="goComm()">
+		<i class="nav-earth active"></i>
+		<p>喵~社区</p>
+	</div>
+	<div class="footer-nav " ng-click="goCart()">
+		<i class="nav-cart "></i>
+		<p>购物车</p>
+	</div>
+	<div class="footer-nav " ng-click="goCenter()">
+		<i class="nav-me "></i>
+		<p>喵~Me</p>
+	</div>
+</footer>

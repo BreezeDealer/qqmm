@@ -1,0 +1,214 @@
+<div class="home" style="display: block;" ng-controller="testCtrl">
+	<header>
+		<i class="iconfont icon-search"></i>
+		<h2>全球喵喵</h2>
+	</header>
+	<div class="swiper-container homeSwiper swiper-container1">
+		<div class="swiper-wrapper clrfix">
+			<div class="swiper-slide flt" ng-repeat="slide in homeBanner">
+				<img ng-src="{{slide.picture}}"/>
+			</div>
+		</div>
+		<div class="swiper-pagination"></div>
+	</div>
+
+	<div class="swiper-container homeSwiper2 swiper-container2">
+		<div class="swiper-wrapper clrfix">
+			<div class="swiper-slide" ng-repeat="slide in homeC">
+				<img ng-src="{{slide.picture}}"/>
+			</div>
+		</div>	
+	</div>
+	<div class="contain1">
+		<div class="qiang1 clrfix">
+			<span class="qText flt">~抢!&nbsp;整点~</span>
+			<div class="qTime frt">
+				<span class="jsD flt">距离剁手结束</span>
+				<div class="qTimes flt">
+					<span class="Hhour flt" ng-bind="times.hour"></span>
+					<span class="mao flt">:</span>
+					<span class="Hmin flt" ng-bind="times.minutes"></span>
+					<span class="mao flt">:</span>
+					<span class="Hsecond flt" ng-bind="times.seconds"></span>
+				</div>
+			</div>
+		</div>
+		<div class="qiang2">
+			<ul class="clrfix">
+				<li class="flt" ng-repeat="item in qiangList">
+					<div class="hot">
+						<img src="img/homeQg1.jpg"/>
+					</div>
+					<div class="imgBox">
+						<img ng-src="{{item.image}}"/>
+					</div>
+					<p class="produceName" ng-bind="item.produce_name"></p>
+					<p class="price">
+						<span class="nowP" ng-bind="item.price | to_price |  currency:'¥'"></span>
+						<del class="oldP" ng-bind="item.sell_price | to_price |  currency:'¥'"></del>
+					</p>
+					<p class="qiangT">抢购</p>
+				</li>
+				<li class="flt lastLi">
+					<div class="imgBox">
+						<div class="lastT">
+							<h2 class="txt1">更&nbsp;多</h2>
+							<h2 class="txt2">MORE</h2>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="contain2">
+		<div class="contain2List">
+			<div class="swiper-container homeSwiper3 swiper-container3">
+				<div class="swiper-wrapper clrfix">
+					<div class="swiper-slide flt" ng-repeat="slide in xuanXList">
+						<div class="imgBox">
+							<img ng-src="{{slide.bargain_image}}"/>
+						</div>
+						<div class="qTime frt">
+							<span class="jsD flt">距离剁手结束</span>
+							<div class="qTimes flt">
+								<span class="Hhour flt" ng-bind="slide.time.hour"></span>
+								<span class="mao flt">:</span>
+								<span class="Hmin flt" ng-bind="slide.time.minutes"></span>
+								<span class="mao flt">:</span>
+								<span class="Hsecond flt" ng-bind="slide.time.seconds"></span>
+							</div>
+						</div>
+						<div class="disc clrfix">
+							<p class="name flt" ng-bind="slide.bargain_name"></p>
+							<p class="attend frt">
+								<span>关注</span>
+								<span ng-bind="slide.focus_count"></span>
+								<span class="iconfont icon-starLike"></span>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-button-prev">
+					<div class="xianShiC flt ">
+						<div ng-click="showJ()" ng-class="{true:'jinT active',false:'jinT'}[show1]">
+							<span>今日限时</span>
+						</div>
+					</div>
+				</div>
+    			<div class="swiper-button-next">
+    				<div class="xianShiC flt ">
+						<div ng-click="showM()" ng-class="{true:'jinT active',false:'jinT'}[show2]">
+							<span class="">明日赶早</span>
+						</div>
+					</div>
+    			</div>
+			</div>		
+		</div>
+	</div>
+	<div class="contain3">
+		<div class="bigP clrfix">
+			<div class="leftP flt">~你好!&nbsp;大牌~</div>
+			<div class="rightP frt">
+				<span>更多</span>
+				<span class="iconfont icon-right"></span>
+			</div>
+		</div>
+		<div class="picBoxs">
+			<ul class="clrfix">
+				<li class="flt">
+					<img src="http://file.quanqiumiaomiao.cn/upload/20160723/136/02016072321013600005801720172.jpg"/>
+				</li>
+				<li class="flt">
+					<img src="http://file.quanqiumiaomiao.cn/upload/20160723/049/02016072321104900004601720172.jpg"/>
+				</li>
+				<li class="flt">
+					<div class="zheZao">
+						<div class="disc">
+							<p>更 多 星 光 大 牌</p>
+							<p>More Star Brand</p>
+						</div>
+					</div>
+					<img src="http://file.miaobuy.com/upload/20160530/728/4201605301907280000d002ed01aa.jpg" />
+				</li>
+			</ul>
+		</div>
+			
+	</div>
+	<div class="contain4">
+		<div class="bigP themeP clrfix">
+			<div class="leftP flt">~喵!&nbsp;好物~</div>
+			<div class="rightP frt">
+				<span>更多</span>
+				<span class="iconfont icon-right"></span>
+			</div>
+		</div>
+		<ul>
+			<li ng-repeat="item in themeList1">
+				<div class="imgBox1">
+					<img ng-src="{{item.good_image}}"/>
+					<div class="disc clrfix">
+						<p class="name flt" ng-bind="item.good_name"></p>
+						<p class="attend frt">
+							<span>关注 :</span>
+							<span ng-bind="{true:item.focus_count,false:'1000+'}[item.focus_count*1<1000]"></span>
+							<span class="iconfont icon-starLike"></span>
+						</p>
+					</div>
+				</div>
+				<div class="imgBox2">
+					<ul class="smallList clrfix">
+						<li class="flt" ng-repeat="item2 in item.producelist">
+							<img ng-src="{{item2.main_image}}"/>
+							<p ng-bind="item2.name" class="name"></p>
+							<p class="price">
+								<span class="nowP" ng-bind="item2.sell_price | to_price |  currency:'¥'"></span>
+								<del class="oldP" ng-bind="item2.market_price | to_price |  currency:'¥'"></del>
+							</p>
+						</li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div class="contain5">
+		<div class="bigP themeP clrfix">
+			<div class="leftP flt">~喵~</div>
+		</div>
+		
+		<div class="imgBox2">
+			<ul class="smallList lastL clrfix">
+				<li class="flt" ng-repeat="item2 in lastList">
+					<div class="imgC">
+						<img ng-src="{{item2.image}}"/>
+					</div>
+					
+					<p ng-bind="item2.name" class="name"></p>
+					<p class="price">
+						<span class="nowP" ng-bind="item2.sell_price | to_price |  currency:'¥'"></span>
+						<span class="dollar" ng-bind="item2.dollar |  currency:'$':2"></span><br/>
+						<del class="oldP" ng-bind="item2.market_price | to_price |  currency:'¥'"></del>
+					</p>
+				</li>
+			</ul>
+		</div>
+		
+	</div>
+	<footer>
+		<div class="footer-nav " ng-click="goHome()">
+			<i class="nav-home active"></i>
+			<p>喵~首页</p>
+		</div>
+		<div class="footer-nav " ng-click="goComm()">
+			<i class="nav-earth "></i>
+			<p>喵~社区</p>
+		</div>
+		<div class="footer-nav " ng-click="goCart()">
+			<i class="nav-cart "></i>
+			<p>购物车</p>
+		</div>
+		<div class="footer-nav " ng-click="goCenter()">
+			<i class="nav-me "></i>
+			<p>喵~Me</p>
+		</div>
+	</footer>
+</div>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box{
+				width: 80%;
+				background: #DDDDDD;
+				height: 100px;
+				display: flex;
+			}
+			.left{
+				width: 100px;
+				height: 100%;
+				flex: 0 0 100px;
+				background: #FF2D00;
+			}
+			.right{
+				height: 100%;
+				width: 100px;
+								flex: 0 0 100px;
+								background: #00f;
+			}
+			.center{
+				width: 100%;
+								flex: 1 1 100px;
+								background: #0f0;
+								background:linear-gradient(right, red, blue);
+								background:linear-gradient(to right, red , blue);
+			}
+			
+		</style>
+	</head>
+	<body>
+		
+		<div class="box">
+			<div class="left"></div>
+			<div class="center"></div>
+			<div class="right"></div>
+		</div>
+		
+		<script type="text/javascript">
+		/*	function isEmptyObject(e) {  
+	    var t;  
+	    for (t in e){
+	    	console.log(t);
+	    	return false; 
+	    } 
+	         
+	    return true 
+	}  
+	
+	var obj2={
+		name:"hha",
+		
+	};*/
+	//console.log(isEmptyObject(obj2));
+	//console.log(undefined==null);
+	
+	
+	/*(function(num){
+		console.log("*****" + num);
+		if(num<=1){
+			return 1;
+		}
+		return arguments.callee(num -1);
+		
+	})(5)*/
+	console.log("%c%s",//%c是样式，%s是字符串
+            "color: #0f0;background:linear-gradient(to right,red,yellow,#0f0,#00f); font-size: 60px;",
+            "警告！");
+		</script>
+	</body>
+</html>

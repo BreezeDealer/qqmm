@@ -1,0 +1,15 @@
+{
+  "index.html": {
+    "resources": [
+      "shequ.txt",
+      "css/base.css",
+      "js/swiper-3.3.1.jquery.min.js",
+      "js/main.js",
+      "data/detail.txt",
+      "css/style.css",
+      "data/shequ.txt",
+      "css/swiper-3.3.1.min.css",
+      "data/data.txt"
+    ]
+  }
+}

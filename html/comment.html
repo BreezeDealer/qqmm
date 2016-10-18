@@ -1,0 +1,25 @@
+<header class="commentTop">
+		<a href="javascript:;" class="iconfont icon-left commentBack" ng-click="commentgoods()"></a>
+		<h2>评价(<span class="opinion-count" ng-bind="detailCount.count" ></span>)</h2>
+		<a href="javascript:;" class="iconfont icon-commentMore"  ng-click="quickgohome2()">
+			<div class="comment-quickgohome " ng-click="commentgohome();">
+					<span class="iconfont icon-shouye"></span>
+					<span ng-click=goHome()>首页</span>
+				</div>
+
+		</a>
+	
+	</header>
+	
+	<div class="comment-promise1">
+	<div class="comment-promise  clrfix" ng-repeat="goods in commentList">
+		<div class="comment-personImg"><img  ng-src="{{goods.commentUrl}}" /></div>
+		<span class="comment-userName" ng-bind="goods.commentName"></span><span class="comment-commentTime" ng-bind="goods.commentTime"></span>
+		<p class="comment-matter" ng-bind="goods.commentContent"></p>
+		
+	</div>
+	</div>
+	<div class="comment-bottom">
+		<a href="javascript:;" class="comment-addCar">加入购物车</a>
+		<a href="javascript:;" class="comment-buy">立即购买</a>
+	</div>
